@@ -1,0 +1,33 @@
+.flow {
+  display:flow-root
+}
+
+.block {   
+  width: 230px;
+  height: 30px;
+  display: block;
+  background-color:antiquewhite;}
+.inline { 
+  width: 230px;
+  height: 30px;
+  display:inline;
+  background-color:aqua;
+}
+.run-in { 
+  width: 230px;
+  height: 30px;
+  display:run-in;
+  background-color:rgb(255, 251, 0);
+}
+.inline-block { 
+  width: 50px;
+  height: 50px;
+  display:inline-block;
+  background-color:chartreuse;
+}
+.flex { 
+  width: 50px;
+  height: 50px;
+  display:flex;
+  background-color:crimson;
+}

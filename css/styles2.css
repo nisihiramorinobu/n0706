@@ -1,0 +1,129 @@
+:root {
+  height: 100%;  
+}
+body {
+  /* margin: 0; */
+}
+.container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  grid-template-areas:   
+              "logo"
+              "nav1"
+              "nav2"
+              "main"
+              "nav3"
+              "aside"
+              "footer"
+              ;
+}
+@media screen and (min-width: 500px){
+  .container {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas:             
+            " logo nav1 nav1 nav2 nav2"
+            "main main main main main" 
+            "nav3 nav3 aside aside aside"        
+            "footer footer footer footer footer";
+   
+  }
+}
+@media screen and (min-width: 800px){
+  .container {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas:             
+    " logo nav1 nav1 nav2 nav2"
+            "nav3 main main main aside"         
+            "footer footer footer footer footer";
+   
+  }
+}  
+
+.logo {
+  grid-area: logo;
+  text-align:center;
+}
+.logo img { 
+  width: 4em;
+  height: 4em;
+ vertical-align:bottom;
+}
+.nav1 {
+  grid-area: nav1;
+}
+.nav2 {
+  grid-area: nav2;
+}
+ul {
+  list-style: none;
+  margin: 0 0 8px 0;
+  padding: 0 0 0 5px;
+  
+}
+ul a {
+  /* width: 100px; */
+  text-align: center;
+  /* line-height: 64px; */
+  display: inline-block;
+}
+ul a:hover {
+  background-color: #eee;
+}
+
+
+
+.main {
+  grid-area: main;
+ 
+  
+}
+.main section {
+ 
+  margin-bottom: 20px;
+}
+..main section .pic {
+  padding: 5px;
+}
+  .main section:nth-child(odd) .pic {    
+    float: left;   
+  }
+  .main section:nth-child(even) .pic {    
+    float: right;   
+  }
+  .main section:nth-child(odd) {    
+    clear: right;   
+  }
+  .main section:nth-child(even) {    
+    clear: left;   
+  }
+.main section img {
+  width: 9em;  
+}
+.main section .pic p {
+  font-size: .8em;
+  margin: 0;
+}
+.main section .desc p {
+  margin: 0;
+
+}
+.nav3 {
+  background-color: lightgreen;
+  grid-area: nav3;
+ 
+}
+.aside {
+  background-color: lavenderblush;
+  grid-area: aside;
+  /* width: 12em;
+  height: 600px; */
+  overflow:scroll;
+  
+}
+.footer {
+  /* width: 200px;
+  height: 600px; */
+ grid-area: footer;
+  background-color: lightblue;
+}
